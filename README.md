@@ -1,4 +1,3 @@
 # CompleteJava8
-# CompleteJava8
-# CompleteJava8
-# CompleteJava8
+Examples and exercises
+
