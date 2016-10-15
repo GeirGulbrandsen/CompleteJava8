@@ -16,6 +16,14 @@ public class Animal {
         this.weight = weight;
     }
 
+    public String eat() {
+        return "The animal is chewing";
+    }
+
+    public void move() {
+
+    }
+
     public String getName() {
         return name;
     }
