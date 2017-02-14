@@ -3,36 +3,45 @@ package com.plusonetesting.encapsulation;
 public class Printer {
 
     private int tonerLevel;
-    private int numberOfPagesPrinted;
+    private int pagesPrinted;
     private boolean isDuplex;
+
+    public Printer() {
+        this(100, 0, true);
+    }
+
+    public Printer(int tonerLevel, int pagesPrinted, boolean isDuplex) {
+        if (tonerLevel >= 0 && tonerLevel <= 100) {
+            this.tonerLevel = tonerLevel;
+        } else {
+            this.tonerLevel = -1;
+        }
+        this.pagesPrinted = pagesPrinted;
+        this.isDuplex = isDuplex;
+    }
 
     public int getTonerLevel() {
         return tonerLevel;
     }
 
-    public int getNumberOfPagesPrinted() {
-        return numberOfPagesPrinted;
+    public int getPagesPrinted() {
+        return pagesPrinted;
     }
 
-    public Printer(int tonerLevel, int numberOfPagesPrinted, boolean isDuplex) {
-        if (tonerLevel >= 0 && tonerLevel <= 100) {
-            this.tonerLevel = tonerLevel;
+    void printPage(int pagesToPrint) {
+        if (this.tonerLevel > 0) {
+            this.pagesPrinted += pagesToPrint;
         }
-        this.numberOfPagesPrinted = numberOfPagesPrinted;
-        this.isDuplex = isDuplex;
     }
 
-    public void fillToner(int tonerAmount) {
-        if (tonerLevel + tonerAmount <= 100) {
-            this.tonerLevel += tonerAmount;
-        } else {
-            System.out.println("Too much toner!");
+    int fillToner(int amount) {
+        if ((this.tonerLevel + amount) <= 100) {
+            return this.tonerLevel += amount;
         }
-        System.out.println("Toner level: " + tonerAmount);
+        else {
+            return this.tonerLevel;
+        }
     }
 
-    public void printPage() {
-        this.numberOfPagesPrinted += 1;
-        System.out.println("Number of pages printed: " + this.numberOfPagesPrinted);
-    }
 }
+

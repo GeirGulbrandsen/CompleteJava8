@@ -2,30 +2,40 @@ package com.plusonetesting.encapsulation;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
 
 public class PrinterTest {
-
     @Test
-    public void fillToner() throws Exception {
-        int initialTonerLevel = 10;
-        int tonerFillAmount = 50;
-        Printer printer = new Printer(initialTonerLevel, 0, true);
+    public void fillingTonerIncreasesTonerLevel() throws Exception {
+        Printer printer = new Printer(0, 0, true);
+        printer.fillToner(50);
 
-        printer.fillToner(tonerFillAmount);
-        assertThat(printer.getTonerLevel(), is(initialTonerLevel + tonerFillAmount));
-
-        printer.fillToner(tonerFillAmount);
-        assertThat(printer.getTonerLevel(), is(initialTonerLevel + tonerFillAmount));
+        assertThat(printer.getTonerLevel(), is(50));
     }
 
     @Test
-    public void printPage() throws Exception {
-        int initialTonerLevel = 10;
-        Printer printer = new Printer(initialTonerLevel, 0, true);
+    public void fillingTooMuchTonerDoesntWork() {
+        Printer printer = new Printer(99,0,true);
+        printer.fillToner(2);
 
-        printer.printPage();
-        assertThat(printer.getNumberOfPagesPrinted(), is(1));
+        assertThat(printer.getTonerLevel(), is(99));
     }
+
+    @Test
+    public void printingPagesIncreasePagesPrinted() throws Exception {
+        Printer printer = new Printer();
+        printer.printPage(1);
+
+        assertThat(printer.getPagesPrinted(), is(1));
+    }
+
+    @Test
+    public void emptyPrinterCantPrint() {
+        Printer printer = new Printer(0,0,true);
+        printer.printPage(1);
+
+        assertThat(printer.getPagesPrinted(), is(0));
+    }
+
 }
