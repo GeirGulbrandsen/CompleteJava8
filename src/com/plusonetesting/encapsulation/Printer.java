@@ -1,16 +1,16 @@
 package com.plusonetesting.encapsulation;
 
-public class Printer {
+class Printer {
 
     private int tonerLevel;
     private int pagesPrinted;
     private boolean isDuplex;
 
-    public Printer() {
+    Printer() {
         this(100, 0, true);
     }
 
-    public Printer(int tonerLevel, int pagesPrinted, boolean isDuplex) {
+    Printer(int tonerLevel, int pagesPrinted, boolean isDuplex) {
         if (tonerLevel >= 0 && tonerLevel <= 100) {
             this.tonerLevel = tonerLevel;
         } else {
@@ -20,11 +20,11 @@ public class Printer {
         this.isDuplex = isDuplex;
     }
 
-    public int getTonerLevel() {
+    int getTonerLevel() {
         return tonerLevel;
     }
 
-    public int getPagesPrinted() {
+    int getPagesPrinted() {
         return pagesPrinted;
     }
 

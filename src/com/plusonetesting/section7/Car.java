@@ -1,6 +1,6 @@
 package com.plusonetesting.section7;
 
-public class Car {
+class Car {
 
     private int doors;
     private int wheels;
@@ -8,7 +8,7 @@ public class Car {
     private String engine;
     private String colour;
 
-    public void setModel(String model) {
+    void setModel(String model) {
         String validModel = model.toLowerCase();
         if (validModel.equals("911") || validModel.equals("commodore")) {
             this.model = model;
@@ -16,7 +16,7 @@ public class Car {
         else this.model = "unknown";
     }
 
-    public String getModel() {
+    String getModel() {
         return this.model;
     }
 }

@@ -14,7 +14,7 @@ public class EnhancedPlayer {
         this.weapon = weapon;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 
@@ -22,11 +22,11 @@ public class EnhancedPlayer {
         this.name = name;
     }
 
-    public int getHealth() {
+    private int getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
+    private void setHealth(int health) {
         this.health = health;
     }
 

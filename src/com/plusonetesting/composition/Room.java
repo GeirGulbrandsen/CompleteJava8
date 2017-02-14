@@ -1,6 +1,6 @@
 package com.plusonetesting.composition;
 
-public class Room {
+class Room {
     private String ceiling;
     private String floor;
     private Window window1;
@@ -8,7 +8,7 @@ public class Room {
     private Door entrance;
     private Bed theBed;
 
-    public Room(String ceiling, String floor, Window window1, Window window2, Door entrance, Bed theBed) {
+    Room(String ceiling, String floor, Window window1, Window window2, Door entrance, Bed theBed) {
         this.ceiling = ceiling;
         this.floor = floor;
         this.window1 = window1;
@@ -17,7 +17,7 @@ public class Room {
         this.theBed = theBed;
     }
 
-    public int getPanes(Window window) {
+    int getPanes(Window window) {
         return window.getPanes();
     }
 
@@ -41,7 +41,7 @@ public class Room {
         return entrance;
     }
 
-    public Bed getTheBed() {
+    Bed getTheBed() {
         return theBed;
     }
 }

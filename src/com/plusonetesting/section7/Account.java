@@ -1,17 +1,17 @@
 package com.plusonetesting.section7;
 
-public class Account {
+class Account {
     private String  accountNumber;
     private double balance;
     private String customerName;
     private String emailAddress;
     private String phoneNumber;
 
-    public Account() {
+    Account() {
         this("", 0.0, "", "", "");
     }
 
-    public Account(String accountNumber, double balance, String customerName, String emailAddress, String phoneNumber) {
+    private Account(String accountNumber, double balance, String customerName, String emailAddress, String phoneNumber) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.customerName = customerName;
@@ -19,53 +19,53 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
 
-    public void deposit(double amount) {
+    void deposit(double amount) {
         this.balance += amount;
     }
 
-    public double withdraw(double amount) {
+    double withdraw(double amount) {
         if (this.balance >= amount)
             this.balance -= amount;
         return this.balance;
     }
 
-    public String getAccountNumber() {
+    String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(String accountNumber) {
+    void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
-    public double getBalance() {
+    double getBalance() {
         return balance;
     }
 
-    public void setBalance(double balance) {
+    void setBalance(double balance) {
         this.balance = balance;
     }
 
-    public String getCustomerName() {
+    String getCustomerName() {
         return customerName;
     }
 
-    public void setCustomerName(String customerName) {
+    void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
 
-    public String getEmailAddress() {
+    String getEmailAddress() {
         return emailAddress;
     }
 
-    public void setEmailAddress(String emailAddress) {
+    void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
-    public String getPhoneNumber() {
+    String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
+    void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

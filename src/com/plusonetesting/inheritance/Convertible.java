@@ -1,12 +1,12 @@
 package com.plusonetesting.inheritance;
 
-public class Convertible extends Car{
+class Convertible extends Car{
 
-    public String foldDown() {
+    String foldDown() {
         return "down";
     }
 
-    public String raiseUp() {
+    String raiseUp() {
         return "up";
     }
 }

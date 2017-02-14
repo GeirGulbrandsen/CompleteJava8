@@ -1,6 +1,6 @@
 package com.plusonetesting.inheritance;
 
-public class Animal {
+class Animal {
 
     private String name;
     private int brain;
@@ -8,7 +8,7 @@ public class Animal {
     private int size;
     private int weight;
 
-    public Animal(String name, int brain, int body, int size, int weight) {
+    Animal(String name, int brain, int body, int size, int weight) {
         this.name = name;
         this.brain = brain;
         this.body = body;
@@ -24,7 +24,7 @@ public class Animal {
 
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 

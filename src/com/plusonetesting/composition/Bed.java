@@ -1,25 +1,25 @@
 package com.plusonetesting.composition;
 
-public class Bed {
+class Bed {
     private Dimensions dimensions;
     private int pillows;
-    private int duvees;
+    private int duvets;
 
-    public Bed(Dimensions dimensions, int pillows, int duvees) {
+    Bed(Dimensions dimensions, int pillows, int duvets) {
         this.dimensions = dimensions;
         this.pillows = pillows;
-        this.duvees = duvees;
+        this.duvets = duvets;
     }
 
     public Dimensions getDimensions() {
         return dimensions;
     }
 
-    public int getPillows() {
+    int getPillows() {
         return pillows;
     }
 
-    public int getDuvees() {
-        return duvees;
+    public int getDuvets() {
+        return duvets;
     }
 }

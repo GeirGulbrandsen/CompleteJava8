@@ -1,9 +1,8 @@
 package com.plusonetesting.inheritance;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class VehicleTest {
 
@@ -35,8 +34,8 @@ public class VehicleTest {
 
     @Test
     public void canSteer() {
-        Vehicle myVehilce = new Vehicle();
-        assertEquals(45, myVehilce.steer(45));
-        assertEquals(25, myVehilce.steer(25));
+        Vehicle myVehicle = new Vehicle();
+        assertEquals(45, myVehicle.steer(45));
+        assertEquals(25, myVehicle.steer(25));
     }
 }

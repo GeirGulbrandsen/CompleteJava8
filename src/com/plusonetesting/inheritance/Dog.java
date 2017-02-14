@@ -1,6 +1,6 @@
 package com.plusonetesting.inheritance;
 
-public class Dog extends Animal {
+class Dog extends Animal {
 
     private int eyes;
     private int legs;
@@ -8,7 +8,7 @@ public class Dog extends Animal {
     private int teeth;
     private String coat;
 
-    public Dog(String name, int size, int weight, int eyes, int legs, int tail, int teeth, String coat) {
+    Dog(String name, int size, int weight, int eyes, int legs, int tail, int teeth, String coat) {
         super(name, 1, 1, size, weight);
         this.eyes = eyes;
         this.legs = legs;

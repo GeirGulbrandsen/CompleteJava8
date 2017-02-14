@@ -3,7 +3,7 @@ package com.plusonetesting.encapsulation;
 public class Player {
 
     public String name;
-    public int health;
+    private int health;
     public String weapon;
 
     public void looseHealth(int damage) {

@@ -1,20 +1,20 @@
 package com.plusonetesting.inheritance;
 
-public class Vehicle {
+class Vehicle {
 
     private String model;
     private String size;
     private int currentVelocity;
     private int currentDirection;
 
-    public Vehicle() {
+    Vehicle() {
         this.model = "Default";
         this.size = "Default";
         this.currentVelocity = 0;
         this.currentDirection = 0;
     }
 
-    public Vehicle(String model, String size) {
+    Vehicle(String model, String size) {
         this.model = model;
         this.size = size;
 
@@ -22,29 +22,29 @@ public class Vehicle {
         this.currentVelocity = 0;
     }
 
-    public String getModel() {
+    String getModel() {
         return model;
     }
 
-    public String getSize() {
+    String getSize() {
         return size;
     }
 
-    public int getCurrentVelocity() {
+    int getCurrentVelocity() {
         return currentVelocity;
     }
 
-    public int getCurrentDirection() {
+    int getCurrentDirection() {
         return currentDirection;
     }
 
 
-    public int steer(int direction) {
+    int steer(int direction) {
         this.currentDirection = direction;
         return this.currentDirection;
     }
 
-    public int increaseSpeed(int speed) {
+    int increaseSpeed(int speed) {
         this.currentVelocity += speed;
         return this.currentVelocity;
     }
