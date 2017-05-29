@@ -25,7 +25,7 @@ public class PrinterTest {
     @Test
     public void printingPagesIncreasePagesPrinted() throws Exception {
         Printer printer = new Printer();
-        printer.printPage(1);
+        printer.printPages(2);
 
         assertThat(printer.getPagesPrinted(), is(1));
     }
@@ -33,7 +33,7 @@ public class PrinterTest {
     @Test
     public void emptyPrinterCantPrint() {
         Printer printer = new Printer(0,0,true);
-        printer.printPage(1);
+        printer.printPages(1);
 
         assertThat(printer.getPagesPrinted(), is(0));
     }

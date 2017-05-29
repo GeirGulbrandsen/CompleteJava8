@@ -28,18 +28,24 @@ class Printer {
         return pagesPrinted;
     }
 
-    void printPage(int pagesToPrint) {
-        if (this.tonerLevel > 0) {
-            this.pagesPrinted += pagesToPrint;
+    void printPages(int pages) {
+        int pagesToPrint = pages;
+        if (this.isDuplex) {
+            pagesToPrint /= 2;
+            System.out.println("Printing in duplex mode");
         }
+        this.pagesPrinted += pagesToPrint;
     }
 
     int fillToner(int amount) {
-        if ((this.tonerLevel + amount) <= 100) {
-            return this.tonerLevel += amount;
-        }
-        else {
+        if (amount > 0 && amount <= 100) {
+            if (this.tonerLevel + amount > 100) {
+                return -1;
+            }
+            this.tonerLevel += amount;
             return this.tonerLevel;
+        } else {
+            return -1;
         }
     }
 
