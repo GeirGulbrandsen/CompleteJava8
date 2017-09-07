@@ -1,5 +1,6 @@
 package com.plusonetesting.secdttion9.arrays.ArrayChallenge;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -14,10 +15,24 @@ public class Main {
     }
 
     private static int[] sortArray(int[] originalInts) {
-        int[] sortedArray = new int[originalInts.length];
+        int[] sortedArray = Arrays.copyOf(originalInts, originalInts.length);
 
+        boolean flag = true;
+        int temp;
 
-        return new int[0];
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < sortedArray.length-1; i++) {
+                if (sortedArray[i] < sortedArray[i + 1]) {
+                    temp = sortedArray[i];
+                    sortedArray[i] = sortedArray[i + 1];
+                    sortedArray[i + 1] = temp;
+                    flag = true;
+                }
+            }
+        }
+
+        return sortedArray;
     }
 
     private static void printArray(int[] intArray) {
