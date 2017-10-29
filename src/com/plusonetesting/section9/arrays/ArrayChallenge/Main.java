@@ -1,4 +1,4 @@
-package com.plusonetesting.secdttion9.arrays.ArrayChallenge;
+package com.plusonetesting.section9.arrays.ArrayChallenge;
 
 import java.util.Arrays;
 import java.util.Scanner;

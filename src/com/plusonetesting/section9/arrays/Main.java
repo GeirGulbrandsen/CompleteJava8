@@ -1,4 +1,4 @@
-package com.plusonetesting.secdttion9.arrays;
+package com.plusonetesting.section9.arrays;
 
 import java.util.Scanner;
 
